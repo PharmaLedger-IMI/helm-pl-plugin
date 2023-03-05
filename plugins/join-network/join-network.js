@@ -12,7 +12,7 @@ async function generateNodeCrypto(config, outputPath) {
     const baseShareFolder = "networks";
     const networkName = config.deployment.network_name;
     const genesisFileName = constants.PATHS.GENESIS_FILE;
-    const genesisUrl = `https://raw.githubusercontent.com/${repoName}/master/${baseShareFolder}/${networkName}/${genesisFileName}`
+    const genesisUrl = `https://raw.githubusercontent.com/${repoName}/master/${baseShareFolder}/${networkName}/${genesisFileName}?token=${token}`
     console.log("genesis url", genesisUrl);
     console.log("output path", outputPath);
     const generatedInfoFile = path.resolve(outputPath, 'join-network.plugin.json');
